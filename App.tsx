@@ -1,21 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import { styles } from './resources/globalStyles'
+import NextToGoRenderer from './components/nextToGoRenderer'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.screen}>
+      <View style = {styles.appHeader}>
+        <Text style={styles.textHeader}>Next to Go!</Text>
+      </View>
+      <View style = {styles.appBody}>
+        <NextToGoRenderer/>
+      </View>
+      <View style = {styles.appFooter}>
+        <Text style = {styles.textFooter}>Technical Challenge - Rhys Jones</Text>
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
