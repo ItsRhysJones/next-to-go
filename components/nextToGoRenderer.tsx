@@ -1,109 +1,89 @@
-import React, { useState } from "react"
-import { Component } from "react"
-import { View, Text, Pressable } from "react-native"
-import { Category, Race } from "../resources/definitions"
+import React, { useEffect, useState } from "react"
+import { View, ActivityIndicator, StyleSheet, Text, Button } from "react-native"
 import RaceInfoList from './raceList'
 import CategoryFilter from './categoryFilter'
-
-type RendererState = {
-    races: Array<Race>,
-    categories: Array<Category>,
-}
+import { incrementRaceCountDowns, initRaceDataApi } from "../store/actions";
+import { useDispatch } from "react-redux";
+import Clock from "./clock";
+import { Theme } from "../resources/globalStyles";
 
 function Renderer() {
 
-    // Mock Data - To Be Deleted
-    let defaultState: RendererState = {
-        races: [
-            {
-                Data: {
-                    RaceId: "race1",
-                    RaceName: "Race 1",
-                    RaceNumber: 1,
-                    AdvertisedStart: 1638669000,
-                    CategoryId: "category1",
-                    MeetingId: "meet1",
-                    MeetingName: "Meet 1"
-                },
-                Category: {
-                    CategoryId: "category1",
-                    Name: "Category 1",
-                },
-                Started: false,
-                CountDown: 123,
-            },
-            {
-                Data: {
-                    RaceId: "race2",
-                    RaceName: "Race 2",
-                    RaceNumber: 2,
-                    AdvertisedStart: 1638668820,
-                    CategoryId: "category1",
-                    MeetingId: "meet2",
-                    MeetingName: "Meet 2"
-                },
-                Category: {
-                    CategoryId: "category2",
-                    Name: "Category 2",
-                },
-                Started: true,
-                CountDown: -3601,
-            }
-        ],
-        categories: [
-            {
-                Data: {
-                    CategoryId: "category2",
-                    Name: "Category 2",
-                },
-                Selected: true,
-            },
-            {
-                Data: {
-                    CategoryId: "category1",
-                    Name: "Category 1",
-                },
-                Selected: false,
-            }
-        ],
-    }
+    const [isLoading, setLoading] = useState<boolean>(true)
+    const [isError, setIsError] = useState<boolean>(false)
+    const [retry, setRetry] = useState<boolean>(true)
 
-    const [races, setRaces] = useState<Array<Race>>(defaultState.races);
-    const [categories, setCategories] = useState<Array<Category>>(defaultState.categories);
+    const dispatch = useDispatch();
 
-    /** Toggles the category's 'selected' property
-     * @param categoryId The ID of the category to toggle
-     */
-    const toggleCategoryFilter = (categoryId: string) => {
-        let updatedCategories = [...categories];
-
-        // Get corresponding category
-        let matchingCategory = updatedCategories.filter((r) => r.Data.CategoryId === categoryId);
-        if (matchingCategory.length == 1) {
-            // Flip 'Selected' value and update state
-            matchingCategory[0].Selected = !matchingCategory[0].Selected
-            setCategories(updatedCategories)
+    useEffect(() => {
+        const loadData = async () => {
+            let success = await initRaceDataApi(dispatch)
+            setLoading(false)
+            setIsError(!success)
         }
+        loadData()
+    }, [dispatch, retry])
+
+    const updateSecondAction = () => {
+        dispatch(incrementRaceCountDowns())
     }
 
-    /** Sets all category 'selected' property to false
-     */
-    const clearCategoryFilters = () => {
-        let updatedCategories = [...categories];
-
-        updatedCategories.forEach((r)=> r.Selected = false)
-        setCategories(updatedCategories)
+    const triggerRetry = () => {
+        setLoading(true)
+        setIsError(false)
+        setRetry(!retry)
     }
 
+    if (isLoading)
+        return (
+            <View style={localStyles.ActivityIndicator}>
+                <ActivityIndicator size="large" color={Theme.btnColourNormal} />
+            </View>
+        )
+
+    if (isError)
+        return (
+            <View style={localStyles.RetryMenuOuter}>
+                <View style = {localStyles.RetryMenuInner}><Text style={localStyles.Message}>There was a problem loading data.</Text></View>
+                <View style = {localStyles.RetryMenuInner}><Button color={Theme.btnColourNormal} onPress={triggerRetry} title="Retry"/></View>
+            </View>
+        )
 
     return (
         <View>
-            <CategoryFilter categories={categories} onPress={toggleCategoryFilter} clearAction={clearCategoryFilters}/>
-            <RaceInfoList races={races} />
+            <CategoryFilter />
+            <RaceInfoList />
+            <Clock updateSecondAction={updateSecondAction} callApiAction={() => initRaceDataApi(dispatch)} />
         </View>
     )
-
 }
+
+const localStyles = StyleSheet.create({
+    // Filter Bar
+    ActivityIndicator: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        height: "100%",
+        width: "100%",
+    },
+    RetryMenuOuter: {
+        flexDirection: 'column',
+        height: "100%",
+        width: "100%",
+        padding: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    RetryMenuInner: {
+        width: "80%",
+        margin: 5,
+        alignItems: 'center',
+    },
+    Message: {
+        color: Theme.BodyColourText,
+        fontSize: Theme.FontSizeSubHeading,
+    },
+})
 
 
 export default Renderer

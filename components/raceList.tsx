@@ -2,20 +2,18 @@ import { StyleSheet } from "react-native"
 import { Theme } from "../resources/globalStyles"
 import React from "react"
 import { View, Text, FlatList } from "react-native"
-import { Race } from "../resources/definitions"
+import { Race, RootReducer } from "../resources/definitions"
+import { useSelector } from "react-redux"
 
 
-type RaceListProps = {
-    races: Array<Race>,
-}
+function RaceList() {
 
-function RaceList(props: RaceListProps) {
+    const races = useSelector((state: RootReducer) => state.Data.Races)
 
     /** Renders the races in card layout
-     * @param races Array of races
      * @returns Flat List containing race info cards
      */
-    const renderRaces = (races: Array<Race>) => {
+    const renderRaces = () => {
         return (
             <FlatList
                 keyExtractor={(item) => item.Data.RaceId}
@@ -25,8 +23,7 @@ function RaceList(props: RaceListProps) {
         )
     }
 
-    /**
-     * Renders a single race's info in a card layout
+    /** Renders a single race's info in a card layout
      * @param race 
      * @returns 
      */
@@ -49,7 +46,7 @@ function RaceList(props: RaceListProps) {
                     <Text style={localStyles.RaceInfoSubHeaderText}>{race.Category.Name}</Text>
                 </View>
                 <View style={localStyles.RaceInfoBody}>
-                    <View>
+                    <View style={{maxWidth: "75%"}}>
                         <Text style={localStyles.RaceInfoBodyText}>Name: {race.Data.RaceName}</Text>
                         <Text style={localStyles.RaceInfoBodyText}>Start Time: {displayDate(race.Data.AdvertisedStart)}</Text>
                     </View>
@@ -100,14 +97,17 @@ function RaceList(props: RaceListProps) {
         return output
     }
 
+    /** Displays the date formatted to local time from epoch
+     * @param utcSeconds Epoch number value
+     * @returns String value for formatted, localised date
+     */
     const displayDate = (utcSeconds: number) => {
         let d = new Date(0);
         d.setUTCSeconds(utcSeconds);
         return `${d.toLocaleDateString()} ${d.toLocaleTimeString()}`
     }
 
-
-    return (renderRaces(props.races))
+    return (renderRaces())
 }
 
 
@@ -123,12 +123,10 @@ const localStyles = StyleSheet.create({
         fontSize: Theme.FontSizeSubHeading,
         fontWeight: "bold"
     },
-
     RaceInfoCard: {
         borderWidth: 2,
         borderBottomLeftRadius: 15,
         borderTopRightRadius: 15,
-
         borderColor: Theme.BorderColour,
         padding: 0,
         marginTop: 10,

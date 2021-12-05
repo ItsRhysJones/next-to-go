@@ -1,0 +1,384 @@
+{
+    "status": 200,
+    "data": {
+        "next_to_go_ids": [
+            "83941994-5762-4ec2-b564-b13d69773d80",
+            "cba2f45a-a80b-4389-9ee9-cb98f04f2463",
+            "dc119fae-7a67-4897-b99f-7c3db21d2351",
+            "132e2a3d-1b8c-4be9-bb3b-31570866e6a3",
+            "a27a6b2f-b43c-4502-8ba1-c80d48a1b735",
+            "47bd7f2c-27dc-4469-8b49-a328d357a49f",
+            "ac7c5cb3-d782-43cd-80e8-83ae91eec6a8",
+            "0a756492-d541-4837-9306-0fb77153a511",
+            "4e0860a3-8106-4b28-98f7-de7208ec56e6",
+            "5969f878-298e-484c-b919-5632cc6565f8"
+        ],
+        "race_summaries": {
+            "0a756492-d541-4837-9306-0fb77153a511": {
+                "race_id": "0a756492-d541-4837-9306-0fb77153a511",
+                "race_name": "Mohawk Pace Ms",
+                "race_number": 5,
+                "meeting_id": "43547d29-6164-4af3-847d-d35b15ea12b7",
+                "meeting_name": "Mohawk",
+                "category_id": "161d9be2-e909-4326-8c2c-35ed71fb460b",
+                "advertised_start": {
+                    "seconds": 1638669000
+                },
+                "race_form": {
+                    "distance": 1609,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "1db9cab0-b747-11ea-80cf-6a390f79827e",
+                        "name": "Fast",
+                        "short_name": "fast"
+                    },
+                    "track_condition_id": "1db9cab0-b747-11ea-80cf-6a390f79827e",
+                    "weather": {
+                        "id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                        "name": "OCAST",
+                        "short_name": "ocast",
+                        "icon_uri": "OCAST"
+                    },
+                    "weather_id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                    "silk_base_url": "drr38safykj6s.cloudfront.net"
+                },
+                "venue_id": "167dbb6b-6324-46b4-b723-4e5985d731f8",
+                "venue_name": "Mohawk",
+                "venue_state": "ON",
+                "venue_country": "CA"
+            },
+            "132e2a3d-1b8c-4be9-bb3b-31570866e6a3": {
+                "race_id": "132e2a3d-1b8c-4be9-bb3b-31570866e6a3",
+                "race_name": "Class 6 Special Weight A Stakes",
+                "race_number": 1,
+                "meeting_id": "35a174de-2af2-48aa-9cfa-030c16522396",
+                "meeting_name": "Seoul",
+                "category_id": "4a2788f8-e825-4d36-9894-efd4baf1cfae",
+                "advertised_start": {
+                    "seconds": 1638668700
+                },
+                "race_form": {
+                    "distance": 1000,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "race_comment": "JAY TROSS (6) was in the placings over 1000m at this track last time after being prominent throughout, finishing just 0.8 lengths from the winner. Rates well and will be in this for a long way. GLOBAL FIRST (2) is a filly by To Honor And Serve out of First Indian stepping out on debut for the Choi Sang Sik stable. Expecting good support out of an inside gate. Serious threat. HERA BLADE (10) is a filly by Purge out of Raipai who is at the races for the first time today. Showed ability with a recent trial placing. Profiles well so keep an eye on betting moves. GEOLJAK DREAM (7) wound up last campaign finishing seventh at this track over 1000m and returns after a 11 weeks break. Rates well and not to be underestimated.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"C6\"],\"prizes\":[{\"type\":\"total_value\",\"value\":\"$70,223\"}],\"start_time\":\"05/12/2021 11:15:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "JAY TROSS (6) was in the placings over 1000m at this track last time after being prominent throughout, finishing just 0.8 lengths from the winner. Rates well and will be in this for a long way. GLOBAL FIRST (2) is a filly by To Honor And Serve out of First Indian stepping out on debut for the Choi Sang Sik stable. Expecting good support out of an inside gate. Serious threat. HERA BLADE (10) is a filly by Purge out of Raipai who is at the races for the first time today. Showed ability with a recent trial placing. Profiles well so keep an eye on betting moves. GEOLJAK DREAM (7) wound up last campaign finishing seventh at this track over 1000m and returns after a 11 weeks break. Rates well and not to be underestimated."
+                },
+                "venue_id": "098f424e-c75e-4983-8032-c82cec0d76ad",
+                "venue_name": "Seoul",
+                "venue_state": "KOR",
+                "venue_country": "KOR"
+            },
+            "47bd7f2c-27dc-4469-8b49-a328d357a49f": {
+                "race_id": "47bd7f2c-27dc-4469-8b49-a328d357a49f",
+                "race_name": "Commercial Hotel Maiden Stake",
+                "race_number": 3,
+                "meeting_id": "af20c7f3-ff3c-4f22-92a2-303eb7671a65",
+                "meeting_name": "Mount Gambier",
+                "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                "advertised_start": {
+                    "seconds": 1638668820
+                },
+                "race_form": {
+                    "distance": 400,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                        "name": "Good",
+                        "short_name": "good"
+                    },
+                    "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                    "weather": {
+                        "id": "08e5f78c-1a36-11eb-9269-cef03e67f1a3",
+                        "name": "FINE",
+                        "short_name": "fine",
+                        "icon_uri": "FINE"
+                    },
+                    "weather_id": "08e5f78c-1a36-11eb-9269-cef03e67f1a3",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"MAIDEN\"],\"prizes\":[{\"type\":\"1st\",\"value\":\"880\"},{\"type\":\"2nd\",\"value\":\"250\"},{\"type\":\"3rd\",\"value\":\"125\"},{\"type\":\"total_value\",\"value\":\"1255\"}],\"start_time\":\"05/12/2021 11:17:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net"
+                },
+                "venue_id": "ee0a708d-fb8a-424d-a37f-742b08540713",
+                "venue_name": "Mount Gambier",
+                "venue_state": "SA",
+                "venue_country": "AUS"
+            },
+            "4e0860a3-8106-4b28-98f7-de7208ec56e6": {
+                "race_id": "4e0860a3-8106-4b28-98f7-de7208ec56e6",
+                "race_name": "Added Energy Heats",
+                "race_number": 8,
+                "meeting_id": "447c91ad-ecca-49ce-b09d-f0e645b47247",
+                "meeting_name": "Ascot Park Nz",
+                "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                "advertised_start": {
+                    "seconds": 1638669000
+                },
+                "race_form": {
+                    "distance": 457,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "1706d200-a75b-11e7-96c3-0656c85e309e",
+                        "name": "Slow",
+                        "short_name": "slow"
+                    },
+                    "track_condition_id": "1706d200-a75b-11e7-96c3-0656c85e309e",
+                    "weather": {
+                        "id": "187e38d4-ab03-11e7-85e3-0641c90711b8",
+                        "name": "Showers",
+                        "short_name": "showers",
+                        "icon_uri": "Showers"
+                    },
+                    "weather_id": "187e38d4-ab03-11e7-85e3-0641c90711b8",
+                    "race_comment": "NIGHTHAWK JET (2) made contact with another runner and could manage only a distant fourth (26.71) in a Class 1 over 457m at this track. Has the ability and can bounce back. BREE'S BELLA (1) showed little early speed at her last couple, the latest finishing sixth (23.46) in a Class 1 at this track. Expected to give a good account. SNIPPET JEWEL (7) ran a nice race two back to fill a minor placing then got off the mark last time (22.75) at this track over 390m. Yet to win here but has run some good races. Must include in calculations. LIGHTFOOT LUNA (3) never far away and can fill a top-three spot.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"C1q\"],\"prizes\":[{\"type\":\"total_value\",\"value\":\"2,800.00\"}],\"start_time\":\"05/12/2021 11:20:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "NIGHTHAWK JET (2) made contact with another runner and could manage only a distant fourth (26.71) in a Class 1 over 457m at this track. Has the ability and can bounce back. BREE'S BELLA (1) showed little early speed at her last couple, the latest finishing sixth (23.46) in a Class 1 at this track. Expected to give a good account. SNIPPET JEWEL (7) ran a nice race two back to fill a minor placing then got off the mark last time (22.75) at this track over 390m. Yet to win here but has run some good races. Must include in calculations. LIGHTFOOT LUNA (3) never far away and can fill a top-three spot."
+                },
+                "venue_id": "60a70a0b-ea28-4693-92cf-90839680991e",
+                "venue_name": "Ascot Park Nz",
+                "venue_state": "NZ",
+                "venue_country": "NZ"
+            },
+            "5969f878-298e-484c-b919-5632cc6565f8": {
+                "race_id": "5969f878-298e-484c-b919-5632cc6565f8",
+                "race_name": "Wayne Harris",
+                "race_number": 1,
+                "meeting_id": "e56c8f31-c6a6-4d3a-a2ba-a147faea520c",
+                "meeting_name": "Capalaba",
+                "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                "advertised_start": {
+                    "seconds": 1638669180
+                },
+                "race_form": {
+                    "distance": 366,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                        "name": "Good",
+                        "short_name": "good"
+                    },
+                    "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                    "weather": {
+                        "id": "08e5f78c-1a36-11eb-9269-cef03e67f1a3",
+                        "name": "FINE",
+                        "short_name": "fine",
+                        "icon_uri": "FINE"
+                    },
+                    "weather_id": "08e5f78c-1a36-11eb-9269-cef03e67f1a3",
+                    "race_comment": "ON THE INSIDE (2) has been hard to follow lately, running fourth (20.63) last time but prior to that ran very well when placed at this track. Better than last run and makes appeal this time. BOB ALBURY (8) shows ability but remains a maiden after 13 starts. Hasn't been able to break through recently but continues to race well, filling the minors at the last three starts. Overdue and is among the main hopes. BECK AND CALL (5) makes his debut from a tricky box and will need a clean break. Worth keeping a close eye on the market. VALKYRIE VIXEN (1) was out of the frame here most recently but can atone.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"MAIDEN\"],\"prizes\":[{\"type\":\"1st\",\"value\":\"1190\"},{\"type\":\"2nd\",\"value\":\"340\"},{\"type\":\"3rd\",\"value\":\"170\"},{\"type\":\"total_value\",\"value\":\"1700\"}],\"start_time\":\"05/12/2021 11:23:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "ON THE INSIDE (2) has been hard to follow lately, running fourth (20.63) last time but prior to that ran very well when placed at this track. Better than last run and makes appeal this time. BOB ALBURY (8) shows ability but remains a maiden after 13 starts. Hasn't been able to break through recently but continues to race well, filling the minors at the last three starts. Overdue and is among the main hopes. BECK AND CALL (5) makes his debut from a tricky box and will need a clean break. Worth keeping a close eye on the market. VALKYRIE VIXEN (1) was out of the frame here most recently but can atone."
+                },
+                "venue_id": "c346630e-e639-4282-9fea-d68d7769e864",
+                "venue_name": "Capalaba",
+                "venue_state": "QLD",
+                "venue_country": "AUS"
+            },
+            "83941994-5762-4ec2-b564-b13d69773d80": {
+                "race_id": "83941994-5762-4ec2-b564-b13d69773d80",
+                "race_name": "Northfield Park F&M Pace Ms",
+                "race_number": 7,
+                "meeting_id": "64de987d-39a9-4664-8ecb-0527459d0ba5",
+                "meeting_name": "Northfield Park",
+                "category_id": "161d9be2-e909-4326-8c2c-35ed71fb460b",
+                "advertised_start": {
+                    "seconds": 1638668340
+                },
+                "race_form": {
+                    "distance": 1609,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "1db9cab0-b747-11ea-80cf-6a390f79827e",
+                        "name": "Fast",
+                        "short_name": "fast"
+                    },
+                    "track_condition_id": "1db9cab0-b747-11ea-80cf-6a390f79827e",
+                    "weather": {
+                        "id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                        "name": "OCAST",
+                        "short_name": "ocast",
+                        "icon_uri": "OCAST"
+                    },
+                    "weather_id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                    "silk_base_url": "drr38safykj6s.cloudfront.net"
+                },
+                "venue_id": "562f0f79-ecf3-4c04-805c-4d074ab7965e",
+                "venue_name": "Northfield Park",
+                "venue_state": "OH",
+                "venue_country": "USA"
+            },
+            "a27a6b2f-b43c-4502-8ba1-c80d48a1b735": {
+                "race_id": "a27a6b2f-b43c-4502-8ba1-c80d48a1b735",
+                "race_name": "Maiden Race",
+                "race_number": 3,
+                "meeting_id": "969c26c8-b892-457f-918f-a8064ab11d72",
+                "meeting_name": "Nakayama",
+                "category_id": "4a2788f8-e825-4d36-9894-efd4baf1cfae",
+                "advertised_start": {
+                    "seconds": 1638668700
+                },
+                "race_form": {
+                    "distance": 1600,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "race_comment": "ROHSTEIN (16) looks close to a win after finishing in the money at both runs, the latest when second at Tokyo over 1600m. Has good early pace and is expected to prove tough to beat. KISEKINO ANGEL (1) came home strongly to finish third, beaten half a length, over 1600m at Tokyo. Leading player again. ROUGE RHEA (10) ran a fair race on debut before a spell to finish a 4 length sixth over 1500m at Sapporo on August 21. Rates well this line up and expected to be in the mix. MONTBRETIA (11) ran an improved race second time out, finishing fourth over 1600m at Tokyo. Open to further improvement and worth including in the winning chances.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"start_time\":\"05/12/2021 11:15:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "ROHSTEIN (16) looks close to a win after finishing in the money at both runs, the latest when second at Tokyo over 1600m. Has good early pace and is expected to prove tough to beat. KISEKINO ANGEL (1) came home strongly to finish third, beaten half a length, over 1600m at Tokyo. Leading player again. ROUGE RHEA (10) ran a fair race on debut before a spell to finish a 4 length sixth over 1500m at Sapporo on August 21. Rates well this line up and expected to be in the mix. MONTBRETIA (11) ran an improved race second time out, finishing fourth over 1600m at Tokyo. Open to further improvement and worth including in the winning chances."
+                },
+                "venue_id": "c63ec15d-ef8c-4185-9b79-2a1c0f772404",
+                "venue_name": "Nakayama",
+                "venue_state": "JPN",
+                "venue_country": "JPN"
+            },
+            "ac7c5cb3-d782-43cd-80e8-83ae91eec6a8": {
+                "race_id": "ac7c5cb3-d782-43cd-80e8-83ae91eec6a8",
+                "race_name": "Race 2 - 1300",
+                "race_number": 2,
+                "meeting_id": "3588775d-1f93-4ef9-b502-d5206ad7103c",
+                "meeting_name": "Mizusawa",
+                "category_id": "4a2788f8-e825-4d36-9894-efd4baf1cfae",
+                "advertised_start": {
+                    "seconds": 1638669000
+                },
+                "race_form": {
+                    "distance": 1300,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "race_comment": "SPIRIT NOAH (3) looks close to a win having made it two placings from his last three starts when second at Morioka Dirt most recently. Encouraging signs last start and looks set to run well again. Has the profile of a winner. TAKAICHI ICHIRO (2) is a four start maiden who was in the money at his last couple of runs, the latest when third at Morioka Dirt and looks close to a win. Yuichi Sakaguchi has been in the money at the last two rides. Among the leading chances. FUKUNEN (5) finished second last start over 1300m at this track and will strip fitter second-up. Major player. DESTIN BONHEUR (10) has claims off a second two back.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"prizes\":[{\"type\":\"total_value\",\"value\":\"$6,108\"}],\"start_time\":\"05/12/2021 11:20:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "SPIRIT NOAH (3) looks close to a win having made it two placings from his last three starts when second at Morioka Dirt most recently. Encouraging signs last start and looks set to run well again. Has the profile of a winner. TAKAICHI ICHIRO (2) is a four start maiden who was in the money at his last couple of runs, the latest when third at Morioka Dirt and looks close to a win. Yuichi Sakaguchi has been in the money at the last two rides. Among the leading chances. FUKUNEN (5) finished second last start over 1300m at this track and will strip fitter second-up. Major player. DESTIN BONHEUR (10) has claims off a second two back."
+                },
+                "venue_id": "eb879db0-d337-4d62-8dfd-64b7d3e7d50b",
+                "venue_name": "Mizusawa",
+                "venue_state": "JPN",
+                "venue_country": "JPN"
+            },
+            "cba2f45a-a80b-4389-9ee9-cb98f04f2463": {
+                "race_id": "cba2f45a-a80b-4389-9ee9-cb98f04f2463",
+                "race_name": "Race 8",
+                "race_number": 8,
+                "meeting_id": "7d037547-911d-48d5-9483-8c176d6bb3ae",
+                "meeting_name": "Tristate",
+                "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                "advertised_start": {
+                    "seconds": 1638668640
+                },
+                "race_form": {
+                    "distance": 677,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "908a410f-ab10-11e7-85e3-0641c90711b8",
+                        "name": "Good3",
+                        "short_name": "good3"
+                    },
+                    "track_condition_id": "908a410f-ab10-11e7-85e3-0641c90711b8",
+                    "race_comment": "Excellent chance for a winner. The inside posting is excellent for #2 Cet Sweet Sneakr, a fairly pacy racer well within the grade. #1 Flying Kraken is a steady runner who can be expected to factor strongly from the wide side of the track. Rail runner in the premier post #4 Dabo Energy also boasts quite a class advantage. Look for a late push home inside. Quiniela, Trifecta, And.10 Superfecta Sold This Race Live Racing, Replays, Results, & Programs At Www.mardigrascasinowv.com Pos Time Approx 2, 1, 4, 5",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"D\"],\"restrictions\":{},\"start_time\":\"05/12/2021 11:15:24 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "Excellent chance for a winner. The inside posting is excellent for #2 Cet Sweet Sneakr, a fairly pacy racer well within the grade. #1 Flying Kraken is a steady runner who can be expected to factor strongly from the wide side of the track. Rail runner in the premier post #4 Dabo Energy also boasts quite a class advantage. Look for a late push home inside. Quiniela, Trifecta, And.10 Superfecta Sold This Race Live Racing, Replays, Results, & Programs At Www.mardigrascasinowv.com Pos Time Approx 2, 1, 4, 5"
+                },
+                "venue_id": "83589dcd-01b5-46f5-9ef8-554aec9f83c4",
+                "venue_name": "Tristate",
+                "venue_state": "WV",
+                "venue_country": "USA"
+            },
+            "dc119fae-7a67-4897-b99f-7c3db21d2351": {
+                "race_id": "dc119fae-7a67-4897-b99f-7c3db21d2351",
+                "race_name": "Hewlett Electrical Sprint",
+                "race_number": 5,
+                "meeting_id": "6d4d9573-cbba-46df-9af8-a5476035fde2",
+                "meeting_name": "Manukau",
+                "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                "advertised_start": {
+                    "seconds": 1638668640
+                },
+                "race_form": {
+                    "distance": 318,
+                    "distance_type": {
+                        "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                        "name": "Metres",
+                        "short_name": "m"
+                    },
+                    "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+                    "track_condition": {
+                        "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                        "name": "Good",
+                        "short_name": "good"
+                    },
+                    "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+                    "weather": {
+                        "id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                        "name": "OCAST",
+                        "short_name": "ocast",
+                        "icon_uri": "OCAST"
+                    },
+                    "weather_id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+                    "race_comment": "ZIPPING SAINT (1) finished well back at this track last time when a 5.5 lengths fifth (18.85) but scored four back at this track (18.48). Form here at the trip sound including six wins. Has run blistering time here, with a 18.45 PB at this distance. Better than the latest run and deserves another chance. ARCHIE JOHN HILL (2) showed good pace from out wide and was prominent throughout before fading out of it when 8th at Cambridge in a Class 4. Form here at the trip sound including three wins. Has a blistering 18.27 best time at this course and distance. Has ability and can atone. MARCUS (8) had the drop on the lead and went on to be beaten 0.6 lengths into second (18.50) at this track in a Class 4 over 318m. Didn't win last time but still ran one of the quickest times on the card. Well-placed to take this out. BASELINE (3) is always hard to beat when he races here at this trip.",
+                    "additional_data": "{\"gait\":\"Gallop\",\"classes\":[\"C34\"],\"prizes\":[{\"type\":\"total_value\",\"value\":\"$2,350\"}],\"start_time\":\"05/12/2021 11:14:00 AM\"}",
+                    "generated": 1,
+                    "silk_base_url": "drr38safykj6s.cloudfront.net",
+                    "race_comment_alternative": "ZIPPING SAINT (1) finished well back at this track last time when a 5.5 lengths fifth (18.85) but scored four back at this track (18.48). Form here at the trip sound including six wins. Has run blistering time here, with a 18.45 PB at this distance. Better than the latest run and deserves another chance. ARCHIE JOHN HILL (2) showed good pace from out wide and was prominent throughout before fading out of it when 8th at Cambridge in a Class 4. Form here at the trip sound including three wins. Has a blistering 18.27 best time at this course and distance. Has ability and can atone. MARCUS (8) had the drop on the lead and went on to be beaten 0.6 lengths into second (18.50) at this track in a Class 4 over 318m. Didn't win last time but still ran one of the quickest times on the card. Well-placed to take this out. BASELINE (3) is always hard to beat when he races here at this trip."
+                },
+                "venue_id": "07c0f0d2-6d9c-49c5-aca7-b87fe11c2399",
+                "venue_name": "Manukau",
+                "venue_state": "NZ",
+                "venue_country": "NZ"
+            }
+        }
+    },
+    "message": "Next 10 races from each category"
+}

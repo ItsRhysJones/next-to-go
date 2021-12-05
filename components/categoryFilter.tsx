@@ -1,21 +1,33 @@
 import React, { useState } from "react"
-import { View, Text, TouchableOpacity, Button, Pressable, TouchableNativeFeedbackComponent, } from "react-native"
-import { Category } from "../resources/definitions"
+import { View, Text, TouchableOpacity, Button, Pressable } from "react-native"
+import { Category, RootReducer } from "../resources/definitions"
 import { StyleSheet, Modal, Switch } from "react-native"
-import { styles, Theme } from "../resources/globalStyles"
+import { Theme } from "../resources/globalStyles"
+import { useSelector, useDispatch } from "react-redux"
+import { clearCategoryFilters, toggleCategoryFilter } from "../store/actions"
 
-type CategoryFilterProps = {
-    categories: Array<Category>,
-    onPress: CallableFunction
-    clearAction: CallableFunction
-}
+function CategoryFilter() {
 
-function CategoryFilter(props: CategoryFilterProps) {
-
+    const categories = useSelector((state: RootReducer) => state.Data.Categories)
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     const toggleIsOpen = () => {
         setIsOpen(!isOpen);
+    }
+
+    const dispatch = useDispatch();
+
+    /** Toggles the category's 'selected' property
+     * @param categoryId The ID of the category to toggle
+     */
+     const CategoryOnPress = (categoryId: string) => {
+        dispatch(toggleCategoryFilter(categoryId))
+    }
+
+    /** Sets all category 'selected' property to false
+     */
+    const ClearOnPress = () => {
+        dispatch(clearCategoryFilters())
     }
 
     /** Renders all categories in a "Filter Bar" as buttons
@@ -30,7 +42,7 @@ function CategoryFilter(props: CategoryFilterProps) {
                         <Button title="Filter" onPress={toggleIsOpen} color={Theme.btnColourNormal} />
                     </View>
                     <View style={localStyles.FilterButton}>
-                        <Button title="Clear Filter" onPress={() => props.clearAction()}
+                        <Button title="Clear Filter" onPress={() => ClearOnPress()}
                             color={Theme.btnColourNormal} />
                     </View>
                 </View>
@@ -50,7 +62,7 @@ function CategoryFilter(props: CategoryFilterProps) {
                                 ))
                             }</View>
                             <View style={localStyles.ClearButton}>
-                                <Button title="Clear Filter" onPress={() => props.clearAction()}
+                                <Button title="Clear Filter" onPress={() => ClearOnPress()}
                                     color={Theme.btnColourNormal} />
                             </View>
                         </View>
@@ -68,20 +80,20 @@ function CategoryFilter(props: CategoryFilterProps) {
     const renderCategory = (category: Category) => {
         return <TouchableOpacity
             key={category.Data.CategoryId}
-            onPress={() => props.onPress(category.Data.CategoryId)}
+            onPress={() => CategoryOnPress(category.Data.CategoryId)}
             style={localStyles.CategoryItem}
         >
             <Switch
                 trackColor={{ false: Theme.BodyColour, true: Theme.HeaderColour }}
                 thumbColor={Theme.btnColourNormal}
-                onChange={() => props.onPress(category.Data.CategoryId)}
+                onChange={() => CategoryOnPress(category.Data.CategoryId)}
                 value={category.Selected}
             />
             <Text style={localStyles.CategoryItemText}>{category.Data.Name}</Text>
         </TouchableOpacity>
     }
 
-    return (renderFilter(props.categories))
+    return (renderFilter(categories))
 }
 
 const localStyles = StyleSheet.create({
