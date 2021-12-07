@@ -91,7 +91,7 @@ export const nextToGoReducer = (state = initialState, action: any) => {
     let now = new Date()
     let epochSeconds = Math.round(now.getTime() / 1000)
 
-    let deleteList = raceDataItems.filter((r) => r.AdvertisedStart - epochSeconds < HIDE_TIME_DELAY)
+    let deleteList = raceDataItems.filter((r) => epochSeconds - r.AdvertisedStart > HIDE_TIME_DELAY)
     deleteList.forEach((d) => raceDataItems.splice(raceDataItems.findIndex((r) => d.RaceId === r.RaceId), 1))
 
     return raceDataItems

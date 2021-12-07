@@ -6,7 +6,8 @@ export const UNKOWN_CATEGORY = "Unkown"
 // Time delay after a race is satrted before it is removed from view
 export const HIDE_TIME_DELAY = 60
 
-// Time delay between API calls
+// Time (ticks) delay between API calls
+// Ticks are roughly 500ms apart
 export const API_CALL_TIME_DELAY = 300
 
 // Endpoint url to retreive data

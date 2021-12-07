@@ -7,6 +7,10 @@ import { useDispatch } from "react-redux";
 import Clock from "./clock";
 import { Theme } from "../resources/globalStyles";
 
+/** Renderer is responsible for handling App Body
+ * Manages data fetch from API and rendering of components
+ * @returns 
+ */
 function Renderer() {
 
     const [isLoading, setLoading] = useState<boolean>(true)
@@ -15,7 +19,11 @@ function Renderer() {
 
     const dispatch = useDispatch();
 
+    // Executes on first render and on initiating a 'rety'
     useEffect(() => {
+        // Triggers initial data fetch.
+        // On Success - Loading screen is disabled and data displays
+        // On Failure - Retry prompt appears
         const loadData = async () => {
             let success = await initRaceDataApi(dispatch)
             setLoading(false)
@@ -24,16 +32,22 @@ function Renderer() {
         loadData()
     }, [dispatch, retry])
 
+    /** Increments the countdown timer and cleans up expired races
+     */
     const updateSecondAction = () => {
         dispatch(incrementRaceCountDowns())
     }
 
+    /** Retry function trigger Effect to poll data from API with state change
+     * Resets IsLoading and IsError states to initial values
+     */
     const triggerRetry = () => {
         setLoading(true)
         setIsError(false)
         setRetry(!retry)
     }
 
+    // Returns loading widget
     if (isLoading)
         return (
             <View style={localStyles.ActivityIndicator}>
@@ -41,6 +55,7 @@ function Renderer() {
             </View>
         )
 
+    // Returns retry prompt
     if (isError)
         return (
             <View style={localStyles.RetryMenuOuter}>
@@ -49,6 +64,7 @@ function Renderer() {
             </View>
         )
 
+    // Retruns race list and filter control
     return (
         <View>
             <CategoryFilter />

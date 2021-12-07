@@ -5,7 +5,10 @@ import { View, Text, FlatList } from "react-native"
 import { Race, RootReducer } from "../resources/definitions"
 import { useSelector } from "react-redux"
 
-
+/** Renders the races in a flat list showing details and countdown
+ * Pulls data from Redux store
+ * @returns Rendered list
+ */
 function RaceList() {
 
     const races = useSelector((state: RootReducer) => state.Data.Races)
@@ -66,6 +69,9 @@ function RaceList() {
      * @returns formatted string output of count down
      */
     const displayCountDown = (time: number) => {
+        if (time == 0) {
+            return "NOW"
+        }
         let output = ""
         let elapsed = false
         let push = (count: number, content: string, output: string) => {

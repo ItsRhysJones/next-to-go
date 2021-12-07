@@ -1,5 +1,5 @@
 import React from "react"
-import { API_CALL_TIME_DELAY } from "../resources/definitions"
+import { API_CALL_TIME_DELAY as API_CALL_TICK_DELAY } from "../resources/definitions"
 
 
 type ClockProps = {
@@ -8,37 +8,42 @@ type ClockProps = {
 }
 
 type ClockState = {
-    seconds: number
+    ticks: number
 }
 
+/** Clock component is used to trigger state updates for race countdown
+ *  Clock also trigger data fetch from API based on API_CALL_TIME_DELAY
+ */
 class Clock extends React.Component<ClockProps, ClockState> {
     interval!: NodeJS.Timer
 
     constructor(props: ClockProps) {
         super(props)
         this.state = {
-            seconds: 0
+            ticks: 0
         }
     }
 
+    /** increment function adjusts state and triggers Clock actions
+     */
     increment = () => {
-        let newStateSeconds = this.state.seconds + 1
+        let newStateTicks = this.state.ticks + 1
 
         this.props.updateSecondAction()
 
-        if (newStateSeconds > API_CALL_TIME_DELAY) {
-            newStateSeconds = 0
+        if (newStateTicks > API_CALL_TICK_DELAY) {
+            newStateTicks = 0
             this.props.callApiAction()
         }
 
         this.setState({
-            seconds: newStateSeconds
+            ticks: newStateTicks
         });
 
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.increment, 1000);
+        this.interval = setInterval(this.increment, 500);
     }
 
     componentWillUnmount() {

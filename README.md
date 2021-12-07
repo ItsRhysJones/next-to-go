@@ -32,11 +32,22 @@ Optional
 * Unit tests
 * Documentation
 
-Aditional design choices
+Additional  design choices
 * Opted to use Expo for ease of debug and testing
 
 
 I have strived to add ALL primary and secondary features.
+
+## Repo Structure
+
+Folder | Contents
+--- | ---
+assets | Expo resources / icons
+component | Custom components used to render 'Next To Go' App
+resources | Centralised Typescript definitions and Theme/Styles
+services | Scripts and processes that access external services or device features
+store | Redux actions and reducers, with accompanied state processing methods
+test | Unit tests and test data
 
 ## Installation
 

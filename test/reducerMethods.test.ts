@@ -273,6 +273,30 @@ test('CleanupExpiredRaces should remove races with expired times that are more t
     CleanupExpiredRaces(raceDataItems)
 
     raceDataItems.forEach((r)=> {
-        expect(r.AdvertisedStart + HIDE_TIME_DELAY > timeSeconds).toBe(true)
+        expect(timeSeconds - r.AdvertisedStart < HIDE_TIME_DELAY ).toBe(true)
+    })
+})
+
+test('CleanupExpiredRaces allowes for races within threshold time after expiration to remain.', () => {
+
+    let raceDataItems: Array<RaceData> = []
+    let timeSeconds = getTimeNowSeconds()
+    
+    HIDE_TIME_DELAY / 10
+
+    for (let i = 0; i < 20; i++) {
+        raceDataItems.push(
+            getMockRaceData(
+                getRandomString(),
+                getRandomString(),
+                timeSeconds - 25 + (i*10) 
+            )
+        )
+    }
+
+    CleanupExpiredRaces(raceDataItems)
+
+    raceDataItems.forEach((r)=> {
+        expect(timeSeconds - r.AdvertisedStart < HIDE_TIME_DELAY ).toBe(true)
     })
 })

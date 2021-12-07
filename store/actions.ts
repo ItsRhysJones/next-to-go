@@ -38,6 +38,7 @@ export const incrementRaceCountDowns = () => {
 }
 
 /** Calls Api to retreive race data items 
+ * @param dispatch dispatcher owned by initiating component
  */
 export async function initRaceDataApi(dispatch: CallableFunction) {
     try {
@@ -56,6 +57,9 @@ export async function initRaceDataApi(dispatch: CallableFunction) {
     }
 }
 
+/** Action to process API payload and load Race Items for display
+ * @param payload Payload received from API call
+ */
 export const updateRaceDataItems = (payload: PayloadSchema) => {
     let action: PayloadAction = { type: UPDATE_RACE_DATA_ITEMS, payload: payload }
     return action
